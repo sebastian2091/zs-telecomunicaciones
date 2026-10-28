@@ -1,0 +1,200 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Z&S Telecomunicaciones ofrece servicios de redes, cableado estructurado, cámaras de seguridad, bases de datos y desarrollo web.">
+
+    <title>Z&S Telecomunicaciones</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <nav class="navbar">
+            <a href="#inicio" class="logo">Z&S <span>Telecomunicaciones</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">SOLUCIONES TECNOLÓGICAS</p>
+
+                <h1>Conectamos tus ideas con la tecnología</h1>
+
+                <p>
+                    Ofrecemos soluciones en telecomunicaciones, redes,
+                    seguridad electrónica, bases de datos y desarrollo web.
+                </p>
+
+                <a href="#servicios" class="btn">Conoce nuestros servicios</a>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="services section">
+            <div class="section-title">
+                <h2>Nuestros servicios</h2>
+                <p>Soluciones tecnológicas para hogares y empresas.</p>
+            </div>
+
+            <div class="services-container">
+
+                <article class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Cableado estructurado</h3>
+                    <p>
+                        Instalación y organización de redes mediante
+                        cableado HFC y UTP para una conectividad confiable.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">📹</div>
+                    <h3>Cámaras de seguridad</h3>
+                    <p>
+                        Instalación y configuración de sistemas de
+                        videovigilancia para proteger tus espacios.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🗄️</div>
+                    <h3>Bases de datos</h3>
+                    <p>
+                        Creación, organización y administración de bases
+                        de datos para gestionar la información.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Desarrollo web</h3>
+                    <p>
+                        Diseño y desarrollo de páginas web modernas,
+                        funcionales y adaptables a diferentes dispositivos.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">📡</div>
+                    <h3>Equipos de telecomunicaciones</h3>
+                    <p>
+                        Instalación y configuración de switches, routers,
+                        módems y equipos terminales.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🖨️</div>
+                    <h3>Soporte tecnológico</h3>
+                    <p>
+                        Configuración de computadores, impresoras y
+                        dispositivos tecnológicos.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="about section">
+            <div class="about-content">
+                <h2>Sobre Z&S Telecomunicaciones</h2>
+
+                <p>
+                    Somos una empresa enfocada en brindar soluciones
+                    tecnológicas que ayudan a mejorar la conectividad,
+                    la seguridad y la gestión de la información.
+                </p>
+
+                <p>
+                    Trabajamos con responsabilidad y compromiso para
+                    ofrecer soluciones adaptadas a las necesidades
+                    de cada cliente.
+                </p>
+
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact section">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>Cuéntanos qué solución tecnológica necesitas.</p>
+            </div>
+
+            <form id="contact-form">
+
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="servicio">Servicio de interés</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Cableado estructurado">Cableado estructurado</option>
+                    <option value="Cámaras de seguridad">Cámaras de seguridad</option>
+                    <option value="Bases de datos">Bases de datos</option>
+                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Equipos de telecomunicaciones">Equipos de telecomunicaciones</option>
+                    <option value="Soporte tecnológico">Soporte tecnológico</option>
+                </select>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Describe lo que necesitas"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">Enviar solicitud</button>
+
+                <p id="form-message" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; <span id="year"></span> Z&S Telecomunicaciones. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+```
