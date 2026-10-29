@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de trabajador | Z&S</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                Z&S <span>Telecomunicaciones</span>
+            </a>
+
+            <button id="logout-button" class="btn" type="button">
+                Cerrar sesión
+            </button>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="section-title">
+            <h1>Panel de trabajador</h1>
+            <p>Bienvenido al sistema de Z&S Telecomunicaciones.</p>
+        </div>
+
+        <div class="services-container">
+            <article class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h2>Servicios</h2>
+                <p>Consulta las opciones de servicio disponibles.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">📋</div>
+                <h2>Solicitudes</h2>
+                <p>Consulta las solicitudes registradas.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">👤</div>
+                <h2>Mi perfil</h2>
+                <p>Consulta tu información de trabajador.</p>
+            </article>
+        </div>
+        
+<section class="section">
+    <div class="section-title">
+        <h2>Solicitudes de clientes</h2>
+        <p>Consulta las solicitudes y actualiza su estado.</p>
+    </div>
+
+    <div id="solicitudes-container">
+        <p>Cargando solicitudes...</p>
+    </div>
+</section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/panel.js"></script>
+</body>
+</html>
