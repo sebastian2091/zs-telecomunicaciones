@@ -34,14 +34,54 @@ async function cargarSolicitudes() {
         return;
     }
 
-    if (data.length === 0) {
-        contenedor.textContent = "No hay solicitudes registradas.";
-        return;
-    }
+console.log(data);
+console.log("Total de solicitudes recibidas:", data.length);
+console.log("Estados:", data.map(solicitud => solicitud.estado));
+
+const totalPendientes = data.filter(function (solicitud) {
+    return (solicitud.estado || "Pendiente").trim().toLowerCase() === "pendiente";
+}).length;
+
+const totalProceso = data.filter(function (solicitud) {
+    return (solicitud.estado || "").trim().toLowerCase() === "en proceso";
+}).length;
+
+const totalFinalizadas = data.filter(function (solicitud) {
+    return (solicitud.estado || "").trim().toLowerCase() === "finalizada";
+}).length;
+
+document.getElementById("total-pendientes").textContent = totalPendientes;
+document.getElementById("total-proceso").textContent = totalProceso;
+document.getElementById("total-finalizadas").textContent = totalFinalizadas;
+
+
+document.getElementById("total-pendientes").textContent = totalPendientes;
+console.log("Pendientes calculados:", totalPendientes);
+console.log("Estados recibidos:", data.map(solicitud => solicitud.estado));
+document.getElementById("total-proceso").textContent = totalProceso;
+document.getElementById("total-finalizadas").textContent = totalFinalizadas;
+
+if (data.length === 0) {
+    contenedor.textContent = "No hay solicitudes registradas.";
+    return;
+}
+
 
     contenedor.innerHTML = "";
 
-    data.forEach(function (solicitud) {
+    
+const filtroEstado = document.getElementById("filtro-estado");
+const estadoSeleccionado = filtroEstado.value;
+
+const solicitudesFiltradas = data.filter(function (solicitud) {
+    const estadoActual = solicitud.estado || "Pendiente";
+
+    return estadoSeleccionado === "Todos" ||
+        estadoActual === estadoSeleccionado;
+});
+
+
+    solicitudesFiltradas.forEach(function (solicitud) {
         const tarjeta = document.createElement("article");
         tarjeta.className = "service-card";
 
@@ -92,7 +132,7 @@ fecha.textContent = "Fecha: " +
         console.error(error.message);
         return;
     }
-
+    await cargarSolicitudes();
     alert("Estado actualizado correctamente.");
 });
 
@@ -136,6 +176,14 @@ async function iniciarPanel() {
 }
 
 iniciarPanel();
+setInterval(cargarSolicitudes, 10000);
+document.getElementById("filtro-estado").addEventListener("change", function () {
+    cargarSolicitudes();
+});
+
+
+
+
 
 const logoutButton = document.getElementById("logout-button");
 

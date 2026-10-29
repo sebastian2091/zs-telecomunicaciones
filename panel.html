@@ -53,6 +53,24 @@
         <p>Consulta las solicitudes y actualiza su estado.</p>
     </div>
 
+
+<div class="filtro-solicitudes">
+    <label for="filtro-estado">Filtrar por estado:</label>
+
+    <select id="filtro-estado">
+        <option value="Todos">Todas las solicitudes</option>
+        <option value="Pendiente">Pendientes</option>
+        <option value="En proceso">En proceso</option>
+        <option value="Finalizada">Finalizadas</option>
+    </select>
+</div>
+
+<div class="resumen-solicitudes">
+    <p>Pendientes: <span id="total-pendientes">0</span></p>
+    <p>En proceso: <span id="total-proceso">0</span></p>
+    <p>Finalizadas: <span id="total-finalizadas">0</span></p>
+</div>
+
     <div id="solicitudes-container">
         <p>Cargando solicitudes...</p>
     </div>
