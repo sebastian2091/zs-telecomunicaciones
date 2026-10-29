@@ -254,3 +254,22 @@ footer {
         padding: 20px;
     }
 }
+
+
+
+.login-link {
+    margin-left: auto;
+    color: white;
+    background: transparent;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    font-weight: inherit;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #38bdf8;
+}
+
